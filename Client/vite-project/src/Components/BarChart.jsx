@@ -30,11 +30,11 @@ const BarChart = ({ month, search }) => {
   }, [month, search]);
 
   const data = {
-    labels: barData.map(item => item.range),
+    labels: barData.map(item => item.range), // Assuming 'range' represents the labels on x-axis
     datasets: [
       {
         label: 'Product Count',
-        data: barData.map(item => item.count),
+        data: barData.map(item => item.count), // Assuming 'count' represents the data on y-axis
         backgroundColor: 'rgba(75,192,192,0.6)',
       },
     ],
@@ -45,10 +45,28 @@ const BarChart = ({ month, search }) => {
     maintainAspectRatio: false,
     scales: {
       x: {
-        beginAtZero: true,
+        type: 'category', // Specify the scale type for x-axis
+        title: {
+          display: true,
+          text: 'Price', // Label for x-axis
+          color: '#333', // Color of the label
+          font: {
+            size: 16, // Font size of the label
+            weight: 'bold' // Font weight of the label
+          }
+        },
       },
       y: {
         beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Product Count', // Label for y-axis
+          color: '#333', // Color of the label
+          font: {
+            size: 16, // Font size of the label
+            weight: 'bold' // Font weight of the label
+          }
+        },
       },
     },
   };
