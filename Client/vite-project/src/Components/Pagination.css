@@ -1,0 +1,45 @@
+.container {
+  max-width: 1200px;
+}
+
+.table-responsive {
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #dee2e6;
+}
+
+.table th {
+  background-color: #343a40;
+  color: white;
+}
+
+.img-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+.form-control {
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+}
