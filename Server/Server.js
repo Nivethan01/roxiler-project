@@ -67,6 +67,7 @@ const getMonthNumber = (month) => {
 function toFloatIfValid(value) {
   if (typeof value !== 'string') {
       return { minPrice: null, maxPrice: null };
+      
   }
   // Use a regular expression to check for a valid float format
   const floatRegex = /^-?\d+(\.\d+)?$/;
