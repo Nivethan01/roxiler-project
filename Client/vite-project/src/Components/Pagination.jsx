@@ -74,14 +74,16 @@ const Pagination = () => {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("https://roxiler-server-nivethan.vercel.app/transactions", {
-        params: {
-          month: selectedMonth,
-          search: searchTerm,
-          page: currentPage,
-        },
-      });
-
+      const response = await axios.get(
+        "https://roxiler-server-nivethan.vercel.app/transactions",
+        {
+          params: {
+            month: selectedMonth,
+            search: searchTerm,
+            page: currentPage,
+          },
+        }
+      );
       const productsData = response.data.products || [];
       setProducts(productsData);
       setTotalPages(Math.ceil(response.data.total / itemsPerPage));

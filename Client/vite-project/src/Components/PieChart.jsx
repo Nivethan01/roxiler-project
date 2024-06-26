@@ -23,8 +23,9 @@ const PieChart = ({ month, search }) => {
     fetchPieChartData();
   }, [month, search]);
 
-  const data = {
+  const data = {         
     labels: pieData.map(item => item._id),
+    
     datasets: [
       {
         label: 'Category Count',
@@ -62,6 +63,7 @@ const PieChart = ({ month, search }) => {
       tooltip: {
         callbacks: {
           label: function(context) {
+            console.log("Context"+context);
             const label = context.label || '';
             const value = context.raw || '';
             return `${label}: ${value}`;
