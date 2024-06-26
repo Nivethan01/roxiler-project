@@ -13,7 +13,7 @@ const BarChart = ({ month, search }) => {
   useEffect(() => {
     const fetchBarChartData = async () => {
       try {
-        const response = await axios.get('https://roxiler-server-nivethan.vercel.app/bar-chart', {
+        const response = await axios.get('http://localhost:3001/bar-chart', {
           params: { month, search }
         });
         setBarData(response.data);

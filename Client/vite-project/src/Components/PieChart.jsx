@@ -11,7 +11,7 @@ const PieChart = ({ month, search }) => {
   useEffect(() => {
     const fetchPieChartData = async () => {
       try {
-        const response = await axios.get('https://roxiler-server-nivethan.vercel.app/pie-chart', {
+        const response = await axios.get('http://localhost:3001/pie-chart', {
           params: { month, search }
         });
         setPieData(response.data);

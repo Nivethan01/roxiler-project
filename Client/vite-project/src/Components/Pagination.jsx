@@ -75,7 +75,7 @@ const Pagination = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        "https://roxiler-server-nivethan.vercel.app/transactions",
+        "http://localhost:3001/transactions",
         {
           params: {
             month: selectedMonth,

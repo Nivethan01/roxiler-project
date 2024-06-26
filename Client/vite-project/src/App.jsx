@@ -22,7 +22,7 @@ function App() {
   const fetchStatistics = async (selectedMonth) => {
     try {
       const response = await axios.get(
-        `https://roxiler-server-nivethan.vercel.app/statistics`,
+        `http://localhost:3001/statistics`,
         {
           params: { month: selectedMonth },
         }

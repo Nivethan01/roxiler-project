@@ -14,7 +14,7 @@ const port = process.env.PORT || 3001;
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: ['https://roxiler-pro.vercel.app']
+  origin: ['https://roxiler-pro.vercel.app', 'http://localhost:5173']
 }));
 app.use(morgan('combined'));
 
@@ -42,7 +42,7 @@ app.get('/products', async (req, res) => {
     const response = await axios.get(url);
     const productData = response.data;
 
-    // Clear existing data (optional)
+    // Clear existing data 
     await Product.deleteMany({});
 
     // Save each product to the database
@@ -328,8 +328,8 @@ app.get('/statistics', async (req, res) => {
 });
 
 // Start server
-// app.listen(port, () => {
-//   console.log(`Server running at http://localhost:${port}/`);
-// });
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});
 
-module.exports = app;
+// module.exports = app;
