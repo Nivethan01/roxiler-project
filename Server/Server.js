@@ -4,7 +4,7 @@ const axios = require('axios');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const morgan = require('morgan');
-const Product = require('./Product'); // Ensure correct path
+const Product = require('./Product'); 
 
 dotenv.config();
 
@@ -24,7 +24,7 @@ mongoose.connect(process.env.MONGODB_URI, {
   useUnifiedTopology: true,
 }).catch(error => {
   console.error('MongoDB connection error:', error);
-  process.exit(1); // Exit the process with a failure code
+  process.exit(1); 
 });
 
 const db = mongoose.connection;
