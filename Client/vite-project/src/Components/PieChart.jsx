@@ -63,7 +63,7 @@ const PieChart = ({ month, search }) => {
       tooltip: {
         callbacks: {
           label: function(context) {
-            console.log("Context"+context);
+            
             const label = context.label || '';
             const value = context.raw || '';
             return `${label}: ${value}`;

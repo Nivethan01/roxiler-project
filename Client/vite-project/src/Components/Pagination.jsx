@@ -175,11 +175,10 @@ const Pagination = () => {
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
-          Next
+         Next
         </button>
       </div>
     </div>
   );
 };
-
 export default Pagination;

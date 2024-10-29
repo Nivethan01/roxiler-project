@@ -14,7 +14,7 @@ const BarChart = ({ month, search }) => {
     const fetchBarChartData = async () => {
       try {
         const response = await axios.get('http://localhost:3001/bar-chart', {
-          params: { month, search }
+          params: { month }
         });
         setBarData(response.data);
       } catch (error) {
@@ -26,7 +26,7 @@ const BarChart = ({ month, search }) => {
     };
 
     fetchBarChartData();
-  }, [month, search]);
+  }, [month]);
 
   const data = {
     labels: barData.map(item => item.range), // Assuming 'range' represents the labels on x-axis
